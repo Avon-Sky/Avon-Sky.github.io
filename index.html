@@ -4,6 +4,7 @@
 		<title>埃文星空个人主页</title>
 		<meta charset="utf-8">
 		<meta name="google-site-verification" content="wuzvl3pG_5aHZi_oU_jcyLeGTHTiLJTAzdGNu6dloBI" />
+		<meta name="baidu-site-verification" content="code-NmTKYEp5EW" />
 	</head>
 	<body>
 		<div style="width:100%;height:100px;">
@@ -194,11 +195,14 @@
 			<li><p>iTunes下载的固件所在位置：C:\Users\你的用户名\AppData\Roaming\Apple Computer\iTunes\iPhone Software Updates</p></li>
 			<li><p>iTunes备份所在位置：C:\Users\用户名\AppData\Roaming\Apple Computer\MobileSync\Backup</p></li>
 			<li style="height: 30;"><p>用itunes更新ios14失败，“发生未知错误(4000)”。解决：提前下载好固件，在iTunes中按住shift同时点击“更新”</p></li>
-			
+			<li><a href="#battery">查看ipad的电池健康（电池最大电量/电池寿命）</a></li>
 		</ul>
 		
 		<h2>随手记</h2>
 		<ul>
+			<li id="battery"><strong>2020.10.11</strong><br />
+				iOS在设置中提供了查看电池健康度的途径，但是在旧版本的iOS（iOS10及以前和ipadOS中，并没有直接查看健康度的方法，可以如下操作：打开设置-隐私-最下面的分析与改进，需要提前打开“共享iPhone分析”，然后在下面的“分析数据”中就可以找到最新的“log-aggregated-2020-xx-xx-xxxxxx.ips”，打开之后在最下面的4/5~5/6的位置，可以找到<key>com.apple.power.battery.raw_max_capacity</key>后面的值就是当前电池的最大容量。然后它上面还有一个.design_capacity是设计容量。一做比值就可得知电池健康度了。		
+			</li>
 			<li id="cannotdw"><strong>2020.10.9</strong><br />
 				别人发过来的文件中缺少了某个零件，我打开装配体后显示“无法定位该零部件的文件以完成操作”，然后让人家把缺失的零件再发过来，发现它不会自动匹配。一、有一种方法是在装配体设计树中右击该零件，点击解除压缩，会弹出对话框，选择正确的零件即可；但这个方法对我没用，我点击解除压缩没有反应；二、可以先打开新发过来的零件，（确保文件名与装配体中一致）然后再打开装配体，重建，该零件就会自动出现了！
 				<a href="#top">回到顶部</a>
