@@ -183,6 +183,11 @@
 			  <li>
 				  <a href="#xyw">校园网用路由器登陆显示“运营商用户认证失败”</a>
 			  </li>
+			  <li>
+				  <p>
+				  <a target="_blank" href="common_code.html">Windows常用代码</a>
+				  </p>
+			  </li>
 			
 		</ul>
 
@@ -195,11 +200,16 @@
 			<li><p>iTunes下载的固件所在位置：C:\Users\你的用户名\AppData\Roaming\Apple Computer\iTunes\iPhone Software Updates</p></li>
 			<li><p>iTunes备份所在位置：C:\Users\用户名\AppData\Roaming\Apple Computer\MobileSync\Backup</p></li>
 			<li style="height: 30;"><p>用itunes更新ios14失败，“发生未知错误(4000)”。解决：提前下载好固件，在iTunes中按住shift同时点击“更新”</p></li>
-			<li><a href="#battery">查看ipad的电池健康（电池最大电量/电池寿命）</a></li>
+			<li><p><a href="#battery">查看ipad的电池健康（电池最大电量/电池寿命）</a></p></li>
+			<li><p><a href="#itunesmusic">插着耳机，iTunes播放音乐没有声音，或从扬声器播放</a></p></li>
 		</ul>
 		
 		<h2>随手记</h2>
 		<ul>
+			<li id="itunesmusic"><strong>2020.10.12</strong><br/>
+				下午在图书馆学习，插着耳机想听歌，打开iTunes发现没有声音，之前就遇到过这个问题，今天好好解决一下。iTunes版本、还有系统的音频驱动一般是没问题的，主要是看iTunes中的设置。在编辑-偏好设置-播放选项卡中，最下面有个“音频播放方式”，里面有"直接声音"和"Windows音频会话"的选项，要改成“直接声音”才可以。“Windows音频会话”是用于在播放音乐时关闭系统声音，但似乎只能在用扬声器的时候使用，关闭扬声器、插着耳机，它就不好使了。<br />
+				具体参考官方说法：<a target="_blank" href="https://support.apple.com/zh-cn/guide/itunes/itns342682b6/windows">在 PC 上的 iTunes 中更改“播放”偏好设置</a>
+			</li>
 			<li id="battery"><strong>2020.10.11</strong><br />
 				iOS在设置中提供了查看电池健康度的途径，但是在旧版本的iOS（iOS10及以前和ipadOS中，并没有直接查看健康度的方法，可以如下操作：打开设置-隐私-最下面的分析与改进，需要提前打开“共享iPhone分析”，然后在下面的“分析数据”中就可以找到最新的“log-aggregated-2020-xx-xx-xxxxxx.ips”，打开之后在最下面的4/5~5/6的位置，可以找到<key>com.apple.power.battery.raw_max_capacity</key>后面的值就是当前电池的最大容量。然后它上面还有一个.design_capacity是设计容量。一做比值就可得知电池健康度了。		
 			</li>
