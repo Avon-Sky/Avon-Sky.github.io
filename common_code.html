@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Windows常用代码</title>
+	</head>
+	<body>
+		<style type="text/css">
+			.ttpp{
+				font-size: 20px;
+			}		
+		</style>
+		
+		<div style="width:100%;height:100px;">
+					<h1 align="center" id="top">Windows常用代码</h1>
+		</div>
+		
+		
+		
+		
+		<ul>
+			<li>
+				<p class="ttpp">获得当前系统的Key<br />
+				powershell "(Get-WmiObject -query 'select * from SoftwareLicensingService').Oa3xOriginalProductKey"</p>
+			</li>
+			<li><p class="ttpp">卸载key，至未激活状态<br/>
+			slmgr.vbs -upk</p></li>
+			<li><p class="ttpp">查看win何时过期<br />	slmgr.vbs -xpr</p></li>
+			<li><p class="ttpp">查看详细激活信息<br />slmgr.vbs -dlv</p></li>
+			<li><p class="ttpp">3600s后自动关机<br />shutdown -s -t 3600</p></li>
+			<li><p class="ttpp">取消自动关机<br />shutdown -a</p></li>
+			<li><p class="ttpp">校验文件<br />
+				CertUtil -hashfile （文件路径) （算法）<br/>
+				例如：CertUtil -hashfile D:\123.exe MD5		校验文件MD5值
+				</p></li>
+		</ul>
+		
+		
+		
+		
+				
+			
+		
+		
+	</body>
+</html>
