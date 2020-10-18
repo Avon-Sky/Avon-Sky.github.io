@@ -9,7 +9,18 @@
 
 <url>
   <loc>https://avon-sky.github.io/</loc>
-  <lastmod>2020-10-09T07:00:11+00:00</lastmod>
+  <lastmod>2020-10-17T02:37:51+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://avon-sky.github.io/common_code.html</loc>
+  <lastmod>2020-10-17T02:37:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://avon-sky.github.io/shortcut_keys.html</loc>
+  <lastmod>2020-10-17T02:37:51+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
