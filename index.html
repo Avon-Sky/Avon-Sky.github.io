@@ -161,13 +161,16 @@
 		<h2 id="one">Solidworks问题总结</h2>
 		
 		<ul>
-		  <li style="height: 60px;"> <a target="_blank" href="http://fans.solidworks.com.cn/forum.php?mod=viewthread&tid=66397&highlight=toolbox%E9%9B%B6%E4%BB%B6%E5%8F%98%E5%A4%A7%E5%8F%98%E5%B0%8F" >
-		        如何解决SOLIDWORKS装配体中Toolbox零件变大变小问题</a> </li>
+		  <li><p><a target="_blank" href="http://fans.solidworks.com.cn/forum.php?mod=viewthread&tid=66397&highlight=toolbox%E9%9B%B6%E4%BB%B6%E5%8F%98%E5%A4%A7%E5%8F%98%E5%B0%8F" >
+		        如何解决SOLIDWORKS装配体中Toolbox零件变大变小问题</a></p></li>
 			
-		  <li style="height: 30px;"> <a target="_blank" href="https://jingyan.baidu.com/article/1e5468f95e5554484961b73c.html">
-		        SW工程图批量转为PDF</a></li>
+		  <li><p><a target="_blank" href="https://jingyan.baidu.com/article/1e5468f95e5554484961b73c.html">
+		        SW工程图批量转为PDF</a></p></li>
 			<li>
-				<a href="#cannotdw">SW无法定位该零部件的文件以完成操作</a>
+				<p><a href="#cannotdw">SW无法定位该零部件的文件以完成操作</a></p>
+			</li>
+			<li>
+				<p><a href="SW_shortcut">SW保存和恢复快捷键等设置</a></p>
 			</li>
 			
 
@@ -193,6 +196,11 @@
 			  	  <a target="_blank" href="shortcut_keys.html">Windows各种快捷键</a>
 			  	  </p>
 			  </li>
+			  <li>
+				  <p>
+					  写专利的权利要求书时很有用：<a href="#wordkh">word中如何给数字批量加括号？</a><br />通配符的使用：<a target="_blank" href="https://www.cnblogs.com/whchensir/p/5768030.html">whchensir一览表</a>、<a target="_blank" href="https://www.zhihu.com/question/334555512">知乎阿德</a>
+				  </p>
+			  </li>
 			
 		</ul>
 
@@ -211,6 +219,13 @@
 		
 		<h2>随手记</h2>
 		<ul>
+			<li id="wordkh"><strong>2020.10.23</strong><br />
+				Word中如何给数字批量加括号？
+				今天写专利，发现权利要求书里面的标号都需要加括号，就学习了一下如何使用word通配符，其实和正则表达式的规则是一样的。Ctrl+H调出替换框，“查找内容”这里，输入“[0-9]@>”的内容，“替换为”这里输入“(^&)”的内容，在“更多”里面勾选“使用通配符”即可把所有以数字结尾的内容加上括号，但是数字在句子中间的不行，例如“冰箱1由冰箱体11、冰箱门12和冰箱底座13组成。”会被替换为“冰箱1由冰箱体（11）、冰箱门12和冰箱底座13组成。”。我的方法暂时是把不能替换的数字后面都加一个空格，再使用刚才的替换方式就可以了。最后再把空格批量删除，即在替换框中，查找内容输入一个空格，替换为啥也不输就完事儿了。
+			</li>
+			<li id="SW_shortcut"><strong>2020.10.21</strong><br />
+				SW保存好的快捷键如何导入导出？随便打开一张零件或装配体，顶部 工具-保存/恢复设置-保存设定-下一步-选择保存的位置名称和需要保存的内容-完成。即可保存。恢复的时候在上面保存设定的下边选择恢复设定即可。
+			</li>
 			<li id="itunesmusic"><strong>2020.10.12</strong><br/>
 				下午在图书馆学习，插着耳机想听歌，打开iTunes发现没有声音，之前就遇到过这个问题，今天好好解决一下。iTunes版本、还有系统的音频驱动一般是没问题的，主要是看iTunes中的设置。在编辑-偏好设置-播放选项卡中，最下面有个“音频播放方式”，里面有"直接声音"和"Windows音频会话"的选项，要改成“直接声音”才可以。“Windows音频会话”是用于在播放音乐时关闭系统声音，但似乎只能在用扬声器的时候使用，关闭扬声器、插着耳机，它就不好使了。<br />
 				具体参考官方说法：<a target="_blank" href="https://support.apple.com/zh-cn/guide/itunes/itns342682b6/windows">在 PC 上的 iTunes 中更改“播放”偏好设置</a>
