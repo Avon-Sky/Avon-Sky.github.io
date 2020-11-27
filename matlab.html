@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MATLAB技巧</title>
+	</head>
+	<body>
+		<div style="width:100%;height:100px;">
+					<h1 align="center" id="top">MATLAB技巧</h1>
+		</div>
+		<h2>基本计算</h2>
+		<table align="center" border="1" cellspacing="0">
+			<tr> <th>计算规则</th><th>matlab语法</th><th>备注</th> </tr>
+			<tr> <td>+-*/</td><td>+-*/</td><td>加减乘除</td> </tr>
+			<tr> <td>^</td><td>^</td><td>乘方</td> </tr>
+			<tr> <td>ln</td><td>log()</td><td>MATLAB语法默认log就是以e为底的</td> </tr>
+			<tr> <td>黎明</td><td>男</td><td></td> </tr>
+		</table>
+		
+		<h2>矩阵计算</h2>
+		<table align="center" border="1" cellspacing="0">
+			<tr> <th>计算规则</th><th>matlab语法</th><th>备注</th> </tr>
+			<tr> <td>+-*/</td><td>+-*/</td><td>按数学中规则，矩阵加减乘除</td> </tr>
+			<tr> <td>数乘</td><td>2*A</td><td>矩阵的数乘</td> </tr>
+			<tr> <td>点乘</td><td>.*</td><td>同型矩阵对应元素相乘</td> </tr>
+			<tr> <td>元素乘方</td><td>A.^2</td><td>矩阵各元素乘方</td> </tr>
+			<tr> <td>矩阵乘方</td><td>A^2</td><td>矩阵（方阵）乘方</td> </tr>
+		</table>
+		
+		<h2>常用函数</h2>
+		<table align="center" border="1" cellspacing="0">
+			<tr> <th>计算规则</th><th>matlab语法</th><th>备注</th> </tr>
+			<tr> <td>平均值</td><td>mean(A)</td><td>A是矩阵：对A的每列取平均值得到一个行向量<br/>A是向量：求平均值得到一个数</td> </tr>
+			<tr> <td>绝对值</td><td>abs(x)</td><td>求x的绝对值</td> </tr>
+			<tr> <td>预分配内存</td><td>alpha = zeros(1,100)</td><td>给alpha变量预分配100个位置，均为0</td> </tr>
+			<tr> <td>显示函数</td><td>fprintf('')</td><td></td> </tr>
+			<tr> <td></td><td></td><td></td> </tr>
+		</table>
+		
+		<h2>常用结构</h2>
+		<h3>循环结构</h3>
+		<ul>
+			<li>while循环：<br />
+			<pre>
+while (表达式)&&(表达式)||(表达式)
+
+	循环体；
+	
+end
+			</pre>
+			表达式计算结果为真的时候，执行循环体。
+			</li>
+		</ul>
+		
+		<h2>常见问题</h2>
+	</body>
+</html>
