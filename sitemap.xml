@@ -1,27 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
 
 <url>
-  <loc>https://avon-sky.github.io/</loc>
-  <lastmod>2020-10-17T02:37:51+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://avon-sky.github.io/common_code.html</loc>
-  <lastmod>2020-10-17T02:37:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://avon-sky.github.io/shortcut_keys.html</loc>
-  <lastmod>2020-10-17T02:37:51+00:00</lastmod>
-  <priority>0.80</priority>
+ <loc>https://avon-sky.github.io/SW_shortcut</loc>
+ <priority>0.3</priority>
+ <lastmod>2020-12-19</lastmod>
+ <changefreq>weekly</changefreq>
 </url>
 
+<url>
+ <loc>https://avon-sky.github.io</loc>
+ <priority>0.3</priority>
+ <lastmod>2020-12-19</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://avon-sky.github.io/common_code.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2020-12-19</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://avon-sky.github.io/matlab.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2020-12-19</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://avon-sky.github.io/shortcut_keys.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2020-12-19</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://avon-sky.github.io/keti.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2020-12-19</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
 
 </urlset>
