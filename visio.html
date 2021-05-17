@@ -25,5 +25,57 @@
 		在许多按钮上右键，都有“添加到快速工具栏”，很方便。
 		
 		<br/><a target="_blank" href="index.html">回到首页</a>
+		
+		<p>
+		<h3>激活</h3> 
+		<table width="100%" height="1000" align="center" border="1" cellspacing="0">
+			<tr>
+				<td>步骤</td>
+				<td>代码</td>
+				
+			</tr>
+			<tr>
+				<td rowspan="2">1.定位到office16文件夹</td>
+				<td>cd /d %ProgramFiles%\Microsoft Office\Office16</td>
+				
+			</tr>
+			<tr>
+				<!--你是多余的：<td></td>  -->
+				<td>cd /d %ProgramFiles(x86)%\Microsoft Office\Office16</td>
+				
+			</tr>
+			<tr>
+				<td rowspan="4">2.Convert your retail license to volume one.</td>
+				<td>For <strong>  Project 2016</strong><br \>for /f %x in ('dir /b ..\root\Licenses16\projectprovl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"</td>
+			</tr>
+			<tr>
+				<td>For <strong>Project 2019</strong><br \>for /f %x in ('dir /b ..\root\Licenses16\projectpro2019vl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
+</td>
+			</tr>
+			<tr>
+				<td>For <strong>Visio 2016</strong><br \>for /f %x in ('dir /b ..\root\Licenses16\visioprovl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
+</td>
+			</tr>
+			<tr>
+				<td>For <strong>Visio 2019</strong><br \>for /f %x in ('dir /b ..\root\Licenses16\visiopro2019vl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
+</td>
+			</tr>
+			<tr>
+				<td rowspan="2">3.Activate your Project/Visio using KMS client key.</td>
+				<td>cscript ospp.vbs /inpkey:THE_CLIENT_KEY<br />
+					cscript ospp.vbs /sethst:kms8.msguides.com（你的KMS服务器）<br />
+					cscript ospp.vbs /setprt:1688<br />
+					cscript ospp.vbs /act</td>
+			</tr>
+			<tr>
+				<td>The full list of client keys:<br />
+				<strong>Project 2016:</strong> YG9NW-3K39V-2T3HJ-93F3Q-G83KT<br />
+				<strong>Project 2019:</strong> B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B<br />
+				<strong>Visio 2016:  </strong> PD3PC-RHNGV-FXJ29-8JK7D-RJRJK<br />
+				<strong>Visio 2019:  </strong> 9BGNQ-K37YR-RQHF2-38RQ3-7VCBB<br />
+				</td>
+			</tr>
+		</table>
+		</p>
 	</body>
 </html>
