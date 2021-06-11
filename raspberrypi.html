@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>树莓派学习记录</title>
+	</head>
+	<body>
+		<style type="text/css">
+			.aa{
+				font-size: larger;
+			}
+			.smallfont{
+				font-size: smaller;
+			}
+			.redfont{
+				color: red;
+				font-weight: bold;
+			}
+		</style>
+		<h1 align="center">树莓派学习记录</h1>
+		
+		<ol class="aa">
+			<li><h3>下载软件</h3>
+				<ul type="disc">
+					<li><a target="_blank" href="https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit">Raspberry Pi OS</a>，三个可选，带桌面+软件2.8G/带桌面1.1G/不带桌面444M</li>
+					<li><a target="_blank" href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a></li>
+					<li><a target="_blank" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY: a free SSH and Telnet client</a></li>
+					<li><a target="_blank" href="https://www.realvnc.com/en/connect/download/viewer/">VNC Viewer</a></li>
+				</ul>
+			</li>
+			
+			<li><h3>安装系统</h3>
+				<ul type="disc">
+					<li>内存卡插电脑上，格式化（不必须）。把下载好的树莓派系统用win32disk  Imager软件烧录到内存卡</li>
+					<li>烧录好之后，打开磁盘，添加名为“SSH”的文件或文件夹，即可打开SSH</li>
+				</ul>
+			</li>
+			<li><h3>设置网络</h3>
+				<ul type="disc">
+					<li>电脑无线网正常连接网络</li>
+					<li>有线网口用网线和pi连接在一起</li>
+					<li>把网络适配器里把无线网共享给以太网</li>
+					<li>在cmd中"arp -a" 指令查看ip，一般是192.168.137开头，物理地址b开头，就是pi</li>
+				</ul>
+			</li>
+			<li><h3>putty连接</h3>
+				<ul type="disc">
+					<li>用putty进行ssh连接，地址就是上一步的ip</li>
+					<li>Appearance可以改命令行的字体字号。然后可以save，以备下次链接。</li>
+					<li>如果出现一个对话框，说明连接成功，点击accept连接</li>
+					<li>如果出现"log as:"，则连接成功。输入用户名pi密码raspberry</li>
+					<li>注意输入密码时，linux系统特性，不带回显。所以没有反应。不用管，正常输入密码点击回车即可。</li>
+					<li>就可以愉快地玩耍啦！ls,cd,rm,touch等<a target="_blank" href="developer.aliyun.com/article/681643">linux基本指令</a>都可以试试</li>
+				</ul>
+			</li>
+			<li><h3>putty中设置一些内容</h3><p class="smallfont">（有的可以进远程桌面设置，但是有时不太方便，权限不够）</p>
+				<ul type="disc">
+					<li>"sudo raspi-config"  进入设置界面</li>
+					<li>2 display options里面可以设置分辨率等</li>
+					<li>3 Interface Options里面打开VNC。就可以用VNC软件连接树莓派的远程桌面了<br \><br \></li>
+					<li><strong>更改镜像源，用于下载软件</strong><p class="redfont"># 编辑 `/etc/apt/sources.list` 文件，删除原文件所有内容，用以下内容取代：</p>
+deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib rpi <br />
+deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib rpi
+					</li>
+					<li><p class="redfont"># 编辑 `/etc/apt/sources.list.d/raspi.list` 文件，删除原文件所有内容，用以下内容取代：</p>
+deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
+					</li>
+					<li>sudo  apt-get update</li>
+					<li>然后再安装以下软件（插件）即可。
+						<p>
+						sudo  apt-get install python3-requests<br \>
+						sudo  apt-get install python3-bs4<br \>
+						sudo  apt-get install time<br />
+						</p>
+					</li>
+				</ul>
+			</li>
+			<li><h3>win与pi传输文件</h3>
+				<ul type="disc">
+					<li>在安装putty的时候已经同时安装了PSFTP软件，打开它</li>
+					<li>open 192.168.137.156  （你树莓派的地址）</li>
+					<li>输入账号密码pi，raspberry</li>
+					<li>传输文件用“put/get 源文件地址 目标地址”，例：</li>
+					<li>put ‪C:\Users\Avon\Documents\top500.py /home/pi/Desktop/top500.py</li>
+					<li>get /home/pi/Desktop/a.txt C:\Users\Avon\Documents\a.txt</li>
+				</ul>
+			</li>
+		</ol>
+		
+		
+		
+	</body>
+</html>
