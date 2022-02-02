@@ -2,13 +2,73 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./css/menu.css">
 		<title>Unity学习笔记</title>
 	</head>
 	<body>
+		<div style="position: fixed;">
+		<div id="menu1" class="menu_hide">
+			<ul class="ul_css">
+				<h1 align="center">目录</h1>
+				<li>
+					<a href="#caozuopian"><strong>操作篇</strong></a>
+					<ul class="ul_css">
+						<li>
+							<a href="contact.asp">1 Unity介绍</a>
+							<ul>
+								<li><a href="contact.asp">1.1 Unity简介</a></li>
+							</ul>
+						</li>
+						
+						<li>
+							<a href="#7">7 物理引擎</a>
+							<ul>
+								<li><a href="#7.1">7.1 Rigidbody-刚体</a></li>
+								<li><a href="#7.2">7.2 Colliders-碰撞体</a></li>
+								<li><a href="#7.3">7.3 Character Controller-角色控制器</a></li>
+								<li><a href="#7.4">7.4 布料</a></li>
+								<li><a href="#7.5">7.5 关节</a></li>
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+				
+				<li>
+					<a href="news.asp"><strong>开发篇</strong></a>
+					<ul class="ul_css">
+						
+						<li><a href="contact.asp">Contact</a></li>
+						<li><a href="about.asp">About</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<button style="position: fixed;left: 0;" onclick="hide_show('menu1')" class="menu_button">展开/隐藏目录</button>
+		</div>
 		
+		
+		
+		<!--导入showtime.js文件-->
+		<script type="text/javascript" src="./js/menu.js"></script>
+		
+		
+		<!-- 两行是前端引入，用于生成目录
+		<link rel="stylesheet" href="https://unpkg.com/autocjs@1.3.0/dist/autoc.min.css">
+		<script type="text/javascript" src="https://unpkg.com/autocjs@1.3.0/dist/autoc.min.js"></script> -->
 		<div style="width: 100%;height: 50px;">
 		<h1 align="center" id="top">Unity学习笔记</h1>
 		</div>
+		
+		<!-- <div id="menu">
+			<span>目录</span><button style="position: absolute;right: 0;" onclick="go()">展开/隐藏</button>
+			<div id="menu-content">
+				目录内容放在这里
+				
+			</div>
+			
+		</div> -->
 		
 		<table width="100%"  align="center" border="1" cellspacing="0">
 			<tr>
@@ -51,9 +111,8 @@
 			</tr>
 			
 			
-		</table>
-		<!-- <p><strong>历史记录：</strong>此功能非常重要！！
-		首选。一定要调出来（窗口-历史记录）。 </p> -->
+		</table> 
+		
 		
 		<ul>
 			<li>
@@ -86,6 +145,23 @@
 					<li>cs脚本：双击可以在IDE里打开。</li>
 				</ol>
 			</li>
+			
+			<li>
+				<strong>关节</strong>
+				<ol>
+					<li>脚本都继承于MonoBehavior</li>
+					<li>两个重要函数：Update每一帧都会被调起；Start函数刚开始调起。</li>
+					<li>transform.Rotate(Vector3.right, Time.deltaTime * 10, Space.Self);//绕自身x轴负向转<br />
+					up,绕自身Y轴正转
+					forward,绕自身Z轴正转
+					</li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</li>
 			<li>
 				<strong>cs脚本：</strong>
 				<ol>
@@ -95,6 +171,8 @@
 					<li></li>
 					<li></li>
 				</ol>
+				
+				
 			</li>
 		
 		
@@ -103,6 +181,86 @@
 		
 		
 		</ul>
+		
+		
+		<div>
+			<h2 id="caozuopian">操作篇</h2>
+			<h3 id="7">7.物理引擎</h3>
+			
+			<h4 id="7.1">7.1 Rigidbody-刚体</h4>
+			<br />
+			<br />
+			<br />
+			
+			<h4 id="7.2">7.2 Colliders-碰撞体</h4>
+			<br />
+			<br />
+			
+			<h4 id="7.3">7.3 Character Controller-角色控制器</h4>
+			
+			<h4 id="7.4">7.4 布料</h4>
+			
+			<h4 id="7.5">7.5 关节</h4>
+			<h5>7.5.1 Hinge Joint：铰链关节</h5>
+			两个刚体进行约束，非常适用对门的模拟，以及模型链及钟摆等物体模拟。<br />
+			<table align="center" border="1" cellspacing="0" width="100%">
+				<tr>
+					<th>属性</th>
+					<th colspan="2">详情</th>
+				</tr>
+				<tr>
+					<td>Connected Body</td>
+					<td colspan="2"></td>
+				</tr>
+				<tr></tr>
+				
+			</table>
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<h3>C#(Csharp)基础</h3>
+			<h4>新建项目</h4>
+			打开Visual Studio---新建项目---空白解决方案---设置好项目名、路径<br />
+			视图——解决方案资源管理器Ctrl+Alt+L <br />
+			解决方案——右键——添加——新建项目——Visual C# ——控制台应用程序（控制台应用）<br />
+			<h4>调整字体、界面</h4>
+			工具——选项——字体和颜色——Arial Black/Consolas、大小<br />
+			工具——选项——文本编辑器-所有语言——<strong>行号</strong><br />
+			<h4>开始第一句代码</h4>
+			在main函数里：<br />
+			Console.WriteLine("Hello World!");<br />
+			Console.ReadLine();<br />
+			注意：代码区分大小写！！<br />
+			写代码->生成->运行<br />
+			Console是 类 【工具】
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+		</div>
+		
+		
+		<script src="{% static 'blog/js/script.js' %}"></script>
+		<script type="text/javascript">
+		    new AutocJS({
+		        article: '#needtoc',#文章的ID选择器名称
+		        isOnlyAnchors: true,
+		        //selector: 'h1',
+		        // 不配置 selector 属性，即使用默认选择器
+		        title: '文章目录',
+		    });
+		
+		</script>
+			
+			
+			
 		
 	</body>
 </html>

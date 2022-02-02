@@ -85,6 +85,54 @@ deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
 					<li>get /home/pi/Desktop/a.txt C:\Users\Avon\Documents\a.txt</li>
 				</ul>
 			</li>
+			<li><h3>GPIO引脚定义</h3>
+				<ul type="disc">
+					<li>"gpio readall"指令，查看树莓派引脚定义</li>
+					<li>单个GPIO引脚只能安全吸收16mA的电流</li>
+					<li>HDMI端口使用50mA</li>
+					<li>摄像头模块需要250mA</li>
+					<li>键盘和鼠标电流，100mA或者超过1000mA</li>
+					<li>一般做信号输出，不做负载输出</li>
+				</ul>
+			</li>
+			<li><h3>部分资源链接</h3>
+				<ul type="disc">
+					<li><a target="_blank" href="http://www.52pi.net">http://www.52pi.net</a></li>
+					<li><a target="_blank" href="https://mc.dfrobot.com.cn">https://mc.dfrobot.com.cn</a></li>
+					<li><a target="_blank" href="http://class.eetree.cn/index">https://class.eetree.cn/index</a></li>
+					<li><a target="_blank" href="http://elinux.org/Main_Page">http://elinux.org/Main_Page</a></li>
+					<li><a target="_blank" href="http://uk.rs-online.com/web">http://uk.rs-online.com/web</a></li>
+					<li><a target="_blank" href="https://www.raspberrypi.com/documentation/">https://www.raspberrypi.com/documentation/</a></li>
+				</ul>
+			</li>
+			<li><h3>点灯示例代码</h3>
+				<ul type="disc">
+					<li>	
+<pre><code>#include &lt;wiringPi.h&gt;
+int main(void)
+{
+	wiringPiSetup();
+	pinMode(0,OUTPUT);
+	for(;;)
+	{
+		digitalWrite(0,HIGH);delay(500);
+		digitalWrite(0,LOW);delay(500);
+	}
+return 0;
+}</code></pre>
+					</li>
+					<li>编译
+						<pre><code>gcc -o led led.c -lwiringPi</code></pre>
+					</li>
+					<li>
+						重置命令行高亮颜色
+						<pre><code>source .bashrc</code></pre>
+						
+					</li>
+					<li>键盘和鼠标电流，100mA或者超过1000mA</li>
+					<li>一般做信号输出，不做负载输出</li>
+				</ul>
+			</li>
 		</ol>
 		
 		

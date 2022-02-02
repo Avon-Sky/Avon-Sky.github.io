@@ -57,7 +57,17 @@
 				<strong>各种报错解决：</strong>
 				<ol>
 					<li>QT编译错误——cannot find file .pro<a target="_blank" href="https://blog.csdn.net/huhuandk/article/details/102549733">CSDN</a> </li>
-					<li>点击上方的“选择主体”，点击“选择并遮住”</li>
+					<li>
+						厉害厉害！<a href="https://space.bilibili.com/509973966?from=search&seid=2403985688091309424&spm_id_from=333.337.0.0">杨老板YYDS</a>。延时函数：（Sleep垃圾）
+<pre><code>/***************************延时函数***************************************/
+void MainWindow::Delay_MSec(unsigned int msec)
+{
+    QEventLoop loop;//定义一个新的事件循环
+    QTimer::singleShot(msec, &loop, SLOT(quit()));//创建单次定时器，槽函数为事件循环的退出函数
+    loop.exec();//事件循环开始执行，程序会卡在这里，直到定时时间到，本循环被退出
+}
+/***************************延时函数***************************************/</code></pre>
+					</li>
 					<li>在右侧找到输出设置，勾选“净化颜色”，确定。</li>
 					<li>新建一个图层，把背景色改为想要的颜色，然后Ctrl+Delete填充颜色。</li>
 					<li>把新的纯色图层放下层即可。</li>

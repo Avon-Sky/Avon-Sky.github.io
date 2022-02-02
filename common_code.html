@@ -36,7 +36,7 @@
 			<li><p class="ttpp">网络问题<br />
 				ping ip<br/>
 				ipconfig -all		//所有网络设备的信息<br />
-				
+				route print
 				</p></li>
 			<li><p class="ttpp"><a href="visio.html" target="_blank">激活visio</a>
 				</p></li>	
@@ -64,6 +64,64 @@
 						</table>
 						 <br />
 						
+					</p>
+				</li>
+				<li>
+					<p>
+						<h3>激活Office</h3>
+						<table  width="100%"  align="center" border="1" cellspacing="0">
+							<tr>
+									<th>步骤</th>
+									<th>代码</th>
+									
+							</tr>
+							<tr><td>卸载key(非必要)</td><td>cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /unpkey:XXXXX <br />XXXXX是你想要卸载的产品的密钥后5位，即可卸载密钥。</td></tr>
+							<tr>
+								<td rowspan="2">1.定位到office16文件夹</td>
+								<td>cd /d %ProgramFiles%\Microsoft Office\Office16</td>
+									
+							</tr>
+							<tr>
+									<!--你是多余的：<td></td>  -->
+									<td>cd /d %ProgramFiles(x86)%\Microsoft Office\Office16</td>
+									
+							</tr>
+							<tr>
+									<td rowspan="4">2.Convert your retail license to volume one.</td>
+									<td>For <strong>  Project 2016</strong><br \>for /f %x in ('dir /b ..\root\Licenses16\projectprovl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"</td>
+							</tr>
+							<tr>
+									<td>For <strong>Office 2019</strong><br>安装 KMS 许可证...<br \>for /f %x in ('dir /b ..\root\Licenses16\ProPlus2019VL_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x" >nul<br />安装 MAK 许可证...<br />
+									for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2019VL_mak*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul
+					</td>
+								</tr>
+								<tr>
+									<td>For <strong>Visio 2016</strong><br \>for /f %x in ('dir /b ..\root\Licenses16\visioprovl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
+					</td>
+							</tr>
+							<tr>
+									<td>For <strong>Visio 2019</strong><br \>for /f %x in ('dir /b ..\root\Licenses16\visiopro2019vl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
+					</td>
+							</tr>
+							<tr>
+								<td rowspan="2">3.Activate your Office using KMS client key.</td>
+								<td>cscript ospp.vbs /inpkey:THE_CLIENT_KEY<br />
+									cscript ospp.vbs /sethst:****.com（你的KMS服务器）<br />
+									cscript ospp.vbs /setprt:1688<br />
+									cscript ospp.vbs /act</td>
+							</tr>
+							<tr>
+									<td>The full list of client keys:<br />
+									来源：<a href="https://docs.microsoft.com/zh-cn/DeployOffice/vlactivation/gvlks#gvlks-for-office-2019" target="_blank">microsoft.com</a><br/>
+									<strong>Office 专业增强版 2019:</strong> NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP<br />
+									<strong>Office 专业增强版 2016:</strong> XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99<br />
+									<strong>Project 2016:</strong> YG9NW-3K39V-2T3HJ-93F3Q-G83KT<br />
+									<strong>Project 2019:</strong> B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B<br />
+									<strong>Visio 2016:  </strong> PD3PC-RHNGV-FXJ29-8JK7D-RJRJK<br />
+									<strong>Visio 2019:  </strong> 9BGNQ-K37YR-RQHF2-38RQ3-7VCBB<br />
+									</td>
+							</tr>
+					</table>
 					</p>
 				</li>
 			
