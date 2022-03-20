@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>PS学习笔记</title>
 	</head>
-	<body>
+	<body style="background-color: #FFFAE8;">
 		
 		<div style="width: 100%;height: 50px;">
 		<h1 align="center" id="top">Qt学习笔记</h1>
@@ -72,6 +72,64 @@ void MainWindow::Delay_MSec(unsigned int msec)
 					<li>新建一个图层，把背景色改为想要的颜色，然后Ctrl+Delete填充颜色。</li>
 					<li>把新的纯色图层放下层即可。</li>
 				</ol>
+			</li>
+			
+			<li>
+				<strong>信号和槽的实现：</strong>
+				<ol>
+					<li>在ui中右键控件，“转到槽”，选择信号，会自动连接并生成槽函数。</li>
+					<li>在cpp文件的构造函数中，ui->setupUi(this);之后，添加：
+<pre><code>connect(fTimer_01,SIGNAL(timeout()),this,SLOT(on_timer_timeout_01()));
+//连接信号与槽。（谁发出信号，发出什么信号，谁处理信号，怎么处理(提前写好槽函数)）</code></pre>
+					</li>
+					<li>方法同2，但是里面参数不一样写法：
+<pre><code>connect(ui->cancelButton,&QPushButton::clicked,this,&Widget::on_cancelButtonClicked;
+//连接信号与槽。（谁发出信号，发出什么信号，谁处理信号，怎么处理(提前写好槽函数)）</code></pre>
+					</li>
+					<li>方法同2，但是里面参数不一样写法：
+<pre><code>connect(ui->cancelButton,&QPushButton::clicked,[this]()
+{
+	QMessageBox::information(this,"信息","点击浏览")
+};
+//连接信号与槽。（谁发出信号，发出什么信号，谁处理信号，怎么处理(槽函数不用在别处写)）</code></pre>
+					</li>
+					<li></li>
+				</ol>
+			</li>
+			
+			<li>
+							<strong>QSS样式表：</strong>
+							<ol>
+								<li>选择器 {property:value}如：
+									<pre><code>QPushButton {color:red}</code></pre>
+								</li>
+								<li>几个选择器相同声明，逗号分隔
+									<pre><code>QPushButton,QLineEdit,QComboBox {color:red}</code></pre>
+								</li>
+								<li>多个属性，分号分隔：
+<pre><code>QPushButton {
+    color:red;background-color:white;
+}</code></pre>
+								</li>
+								<li>qt中设置样式表重要函数：setStyleSheet
+									<pre><code>ui->pushButton->setStyleSheet(QString("QPushButton {color:blue}"));</code></pre>
+								</li>
+								<li></li>
+							</ol>
+			</li>
+			
+			<li>
+				<strong>vector向量</strong>
+				<ul style="list-style-type: square;">
+					<li>
+						<pre><code>vector<int> test;   //创造一个内容为int的向量</code></pre>
+						<pre><code>test.push_back(1);  //把1压入test的尾部</code></pre>
+						<pre><code>test.push_back(4);  //把4压入test的尾部</code></pre>
+						<pre><code>//现在test[0]==1，test[1]==4。</code></pre>
+					</li>
+					<li>2</li>
+					<li>1</li>
+				</ul>
 			</li>
 		</ul>
 		
