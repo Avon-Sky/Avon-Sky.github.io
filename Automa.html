@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1 align="center" id="top">Automa教程</h1>
+		
+		
+		<li>
+			<strong>表达式：</strong>
+			<ol>
+				<li>官网：<a href="https://automa.wiki/workflow/expressions.html">https://automa.wiki/workflow/expressions.html</a> </li>
+				<li>这里只举几个例子。</li>
+				<li>调用值{{keyword@name}}或者{{keyword.name}}均可。如{{variables@data}}</li>
+				<li>表达式里套表达式，需要[]括起来。例如：i为数字，date为文字，<br />
+				{{table.[variables.i].date}}<br />
+				意思是将表格中第[]行，date列的内容调用出来。</li>
+				<li>而
+				{{table.date.[variables.i]}}<br />
+				意思是将表格中第date列，它的第一行文字中的第[]个字符调用出来。</li>
+				
+			</ol>
+			<p style="text-indent: 1em;">函数:</p> 
+			<ol>
+				<li>所有内置函数都以前缀$开头</li>
+				<li>随机数{{$randint(0, 10)}} 在最小最大值中随机取整数。</li>
+				<li></li>
+			</ol>
+		</li>
+	</body>
+</html>
